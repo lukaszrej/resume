@@ -4,9 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://github.com/lukaszrej',
+  site: "https://lukaszrej.github.io",
+  base: 'https://github.com/lukaszrej/resume',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
