@@ -4,18 +4,18 @@ import BoxHeader from "@/components/box/header.astro";
 import BoxTitle from "@/components/box/title.astro";
 import BoxContent from "@/components/box/content.astro";
 
-import { EXPERIENCES } from "@/lib/constants/experience";
-import ExperienceItem from "./experience-item.astro";
+import { EDUCATION } from "@/lib/constants/education";
+import EducationItem from "./education-item.astro";
 ---
 
 <Box>
   <BoxHeader>
-    <BoxTitle>Experience</BoxTitle>
+    <BoxTitle>Education</BoxTitle>
   </BoxHeader>
   <BoxContent className="px-0">
     {
-      EXPERIENCES.map(experience => {
-        return <ExperienceItem experience={experience} />;
+      EDUCATION.map(education => {
+        return <EducationItem education={education} />;
       })
     }
   </BoxContent>

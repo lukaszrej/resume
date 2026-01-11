@@ -116,26 +116,4 @@ export const EXPERIENCES: Experience[] = [
       },
     ],
   },
-  {
-    company: "Education",
-    positions: [
-      {
-        title: "CodersLab IT School",
-        year: "10.2018 - 06.2019",
-        description: `
-- Field of study: JavaScript Developer – React.js.
-            `,
-        skills: ["React.js", "JavaScript (ES6+)", "UI/UX Foundation", "Github"],
-      },
-      {
-        title: "University of Lodz",
-        year: "10.2018 - 06.2019",
-        description: `
-- Field of study: International Relations
-- Specialization: German studies
-            `,
-        skills: ["English", "German"],
-      },
-    ],
-  },
 ];
