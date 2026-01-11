@@ -1,25 +1,41 @@
 import {
   Figma,
   Framer,
+  HTML5,
+  Docker,
+  CSS3,
   Git,
+  ViteJS,
+  JavaScript,
   NextJs,
   NodeJs,
+  NestJS,
+  Vitest,
+  Prisma,
+  PostgreSQL,
+  NPM,
   React,
   ReactQuery,
   Redux,
+  GraphQL,
+  MaterialUI,
+  TailwindCSS,
   ShadcnUI,
   TypeScript,
   Astro,
 } from "developer-icons";
 
 export const TECH_STACK = [
-  // Programming Languages
   {
     title: "TypeScript",
     href: "https://www.typescriptlang.org/",
     icon: TypeScript,
   },
-  // Frontend Technologies
+  {
+    title: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    icon: JavaScript,
+  },
   {
     title: "React",
     href: "https://react.dev/",
@@ -31,9 +47,14 @@ export const TECH_STACK = [
     icon: NextJs,
   },
   {
-    title: "Astro.js",
-    href: "https://astro.build/",
-    icon: Astro,
+    title: "React Query",
+    href: "https://tanstack.com/query/latest",
+    icon: ReactQuery,
+  },
+  {
+    title: "Material UI",
+    href: "https://mui.com/",
+    icon: MaterialUI,
   },
   {
     title: "Redux",
@@ -41,9 +62,19 @@ export const TECH_STACK = [
     icon: Redux,
   },
   {
-    title: "React Query",
-    href: "https://tanstack.com/query/latest",
-    icon: ReactQuery,
+    title: "HTML5",
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    icon: HTML5,
+  },
+  {
+    title: "CSS3",
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    icon: CSS3,
+  },
+  {
+    title: "Astro.js",
+    href: "https://astro.build/",
+    icon: Astro,
   },
   {
     title: "shadcn/ui",
@@ -55,23 +86,61 @@ export const TECH_STACK = [
     href: "https://motion.dev/",
     icon: Framer,
   },
-
-  // Backend Technologies
+  {
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com/",
+    icon: TailwindCSS,
+  },
   {
     title: "Node.js",
     href: "https://nodejs.org/",
     icon: NodeJs,
   },
-
-  // Databases & Caching
-
-  // DevOps & Development Tools
+  {
+    title: "Nest.js",
+    href: "https://nestjs.com/",
+    icon: NestJS,
+  },
+  {
+    title: "Prisma",
+    href: "https://www.prisma.io/",
+    icon: Prisma,
+  },
+  {
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org/",
+    icon: PostgreSQL,
+  },
+  {
+    title: "GraphQL",
+    href: "https://graphql.org/",
+    icon: GraphQL,
+  },
+  {
+    title: "Vitest",
+    href: "https://vitest.dev/",
+    icon: Vitest,
+  },
   {
     title: "Git",
     href: "https://git-scm.com/",
     icon: Git,
   },
-  // Miscellaneous
+  {
+    title: "Vite.js",
+    href: "https://vitejs.dev/",
+    icon: ViteJS,
+  },
+  {
+    title: "Docker",
+    href: "https://www.docker.com/",
+    icon: Docker,
+  },
+  {
+    title: "NPM",
+    href: "https://www.npmjs.com/",
+    icon: NPM,
+  },
   {
     title: "Figma",
     href: "https://www.figma.com/",
