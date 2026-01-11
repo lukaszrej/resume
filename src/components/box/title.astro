@@ -6,6 +6,6 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<h2 class:list={["text-2xl font-semibold", className]}>
+<h2 class:list={["text-2xl font-semibold text-zinc-400", className]}>
   <slot />
 </h2>
