@@ -9,7 +9,8 @@ const { className } = Astro.props;
 <div
   class:list={[
     "p-4 text-sm",
-    "[&_p]:leading-7 [&_p]:font-medium [&_p]:text-gray-500",
+    "[&_p]:leading-7 [&_p]:font-medium",
+    "[&_p]:text-gray-500 dark:[&_p]:text-gray-400",
     className,
   ]}
 >
