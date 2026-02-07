@@ -5,6 +5,5 @@ export const PROFILE_INFO = {
   displayName: "Łukasz Rej",
   email: "rejlukasz@gmail.com",
   about: `
-Frontend developer specializing in building scalable, long-lived web applications with React and TypeScript. Experienced in designing clean, maintainable architectures and taking ownership of complex products — from greenfield projects to refactoring legacy codebases. Strong focus on code quality, performance, and developer experience, guided by SOLID and Clean Code principles. Delivered commercial products for clients across Germany, Denmark, and Poland.
-`,
+**Frontend developer** focused on building scalable web applications with **React** and **TypeScript**. Experienced in clean, maintainable architectures and managing complex products, from greenfield projects to legacy refactoring. Committed to **code quality**, **performance**, and **developer experience**, following SOLID and Clean Code principles. Delivered commercial solutions for clients in Germany, Denmark, and Poland.`,
 } as const;
