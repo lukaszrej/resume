@@ -1,0 +1,16 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section class:list={["relative overflow-hidden md:border-x", className]}>
+  <div
+    class="pointer-events-none absolute top-0 right-0 bottom-0 w-[50%] bg-[repeating-linear-gradient(to_left,rgba(0,0,0,0.05)_0_1px,transparent_1px_6px)] bg-[size:100%_12px] dark:bg-[repeating-linear-gradient(to_left,rgba(255,255,255,0.08)_0_1px,transparent_1px_6px)]"
+  >
+  </div>
+
+  <slot />
+</section>

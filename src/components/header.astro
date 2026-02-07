@@ -1,6 +1,7 @@
 ---
 import Avatar from "@/components/ui/avatar.astro";
-import Box from "@/components/box/index.astro";
+// import Box from "@/components/box/index.astro";
+import StyledBox from "@/components/box/styled-box.astro";
 import BoxContent from "@/components/box/content.astro";
 
 import { PROFILE_INFO } from "@/lib/constants/profile";
@@ -44,7 +45,7 @@ import LinkedinIcon from "@/components/ui/icons/linkedin.astro";
   </div>
 </div>
 
-<Box>
+<StyledBox>
   <BoxContent className="space-y-3">
     <span class="flex items-center justify-start gap-2">
       <Briefcase className="size-4" />
@@ -82,4 +83,4 @@ import LinkedinIcon from "@/components/ui/icons/linkedin.astro";
       </a>
     </span>
   </BoxContent>
-</Box>
+</StyledBox>
