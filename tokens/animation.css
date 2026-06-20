@@ -1,0 +1,59 @@
+/* ============================================================
+   Łukasz Rej Design System — Animation & Motion Tokens
+   Based on: Framer Motion defaults used in lukaszrej/resume
+   Style: Quiet, fast, fade-in + slide-up entry
+   ============================================================ */
+
+:root {
+  /* ---------- Duration ---------- */
+  --duration-instant: 50ms;
+  --duration-fast:    150ms; /* UI interactions */
+  --duration-normal:  300ms; /* Transitions */
+  --duration-slow:    500ms; /* Page entry */
+  --duration-slower:  700ms; /* Sequences */
+
+  /* ---------- Easing ---------- */
+  --ease-linear:   linear;
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:       cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out:   cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-standard: ease-out;
+
+  /* ---------- Named Transitions ---------- */
+  --transition-colors: color var(--duration-fast), background-color var(--duration-fast), border-color var(--duration-fast);
+  --transition-opacity: opacity var(--duration-fast) var(--ease-out);
+  --transition-transform: transform var(--duration-normal) var(--ease-out);
+  --transition-all: all var(--duration-fast) var(--ease-out);
+}
+
+/* ---------- Named Keyframes ---------- */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to   { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to   { height: 0; }
+}

@@ -1,0 +1,53 @@
+/* ============================================================
+   Łukasz Rej Design System — Spacing, Radius & Border Tokens
+   Base grid: 4px
+   ============================================================ */
+
+:root {
+  /* ---------- Spacing Scale (4px base) ---------- */
+  --space-0:   0;
+  --space-0-5: 2px;
+  --space-1:   4px;
+  --space-1-5: 6px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   28px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+
+  /* ---------- Border Radius ---------- */
+  --radius-sm:   0.25rem;   /* 4px  — badges, small elements        */
+  --radius:      0.5rem;    /* 8px  — default — cards, buttons      */
+  --radius-md:   0.5rem;    /* 8px  — alias for --radius            */
+  --radius-lg:   0.75rem;   /* 12px — modals, large cards           */
+  --radius-xl:   1rem;      /* 16px — oversized elements            */
+  --radius-full: 9999px;    /* pill shape                           */
+
+  /* ---------- Border ---------- */
+  --border-width:  1px;
+  --border-style:  dashed; /* ← THE signature visual motif */
+  --border-color:  var(--color-border);
+  --border:        1px dashed var(--color-border);
+
+  /* ---------- Layout ---------- */
+  --content-width:    720px;
+  --content-padding:  24px;
+
+  /* ---------- Scrollbar ---------- */
+  --scrollbar-width:  5px;
+  --scrollbar-color:  var(--color-border);
+
+  /* ---------- Z-Index Scale ---------- */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-modal:   200;
+  --z-top:     1000;
+}

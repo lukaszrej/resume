@@ -1,0 +1,10 @@
+/* ============================================================
+   Łukasz Rej Design System — Root Stylesheet
+   Entry point for consumers. @import lines only — no rules here.
+   ============================================================ */
+
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/animation.css";

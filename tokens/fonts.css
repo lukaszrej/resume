@@ -1,0 +1,18 @@
+/* ============================================================
+   Łukasz Rej Design System — Web Font Imports
+   Original: @fontsource/geist-sans, @fontsource/roboto-condensed,
+             @fontsource/jetbrains-mono (npm, Astro project)
+   Here: Google Fonts CDN equivalents
+   ⚠️  Substitution note: Geist is served from Google Fonts.
+       For the exact @fontsource variant, install the npm
+       packages and replace these @imports with local font files.
+   ============================================================ */
+
+/* Geist — body font, designed by Vercel */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
+
+/* Roboto Condensed — heading font (H1, H2, H3) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* JetBrains Mono — code / monospace font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');

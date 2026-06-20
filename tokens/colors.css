@@ -1,0 +1,73 @@
+/* ============================================================
+   Łukasz Rej Design System — Color Tokens
+   Source: github.com/lukaszrej/resume (src/styles/global.css)
+   Palette: shadcn/ui zinc — near-monochromatic
+   ============================================================ */
+
+:root {
+  /* ---------- Light Mode ---------- */
+
+  /* Raw HSL channels (shadcn/ui compatibility) */
+  --hsl-background: 0 0% 100%;
+  --hsl-foreground: 240 10% 3.9%;
+  --hsl-primary: 240 5.9% 10%;
+  --hsl-primary-fg: 0 0% 98%;
+  --hsl-secondary: 240 4.8% 95.9%;
+  --hsl-muted: 240 4.8% 95.9%;
+  --hsl-muted-fg: 240 3.8% 46.1%;
+  --hsl-border: 240 5.9% 90%;
+  --hsl-ring: 240 5.9% 10%;
+  --hsl-destructive: 0 84.2% 60.2%;
+
+  /* Semantic computed tokens */
+  --color-bg:             hsl(0, 0%, 100%);          /* #ffffff  — page background    */
+  --color-fg:             hsl(240, 10%, 3.9%);        /* #09090b  — primary text       */
+  --color-card:           hsl(0, 0%, 100%);           /* #ffffff  — card surface       */
+  --color-card-fg:        hsl(240, 10%, 3.9%);        /* #09090b  — card text          */
+  --color-primary:        hsl(240, 5.9%, 10%);        /* #18181b  — strong UI, buttons */
+  --color-primary-fg:     hsl(0, 0%, 98%);            /* #fafafa  — on-primary text    */
+  --color-secondary:      hsl(240, 4.8%, 95.9%);      /* #f4f4f5  — subtle fill        */
+  --color-secondary-fg:   hsl(240, 5.9%, 10%);        /* #18181b  — on-secondary text  */
+  --color-muted:          hsl(240, 4.8%, 95.9%);      /* #f4f4f5  — muted surface      */
+  --color-muted-fg:       hsl(240, 3.8%, 46.1%);      /* #71717a  — dates, labels      */
+  --color-accent:         hsl(240, 4.8%, 95.9%);      /* #f4f4f5  — hover fill         */
+  --color-accent-fg:      hsl(240, 5.9%, 10%);        /* #18181b  — on-accent text     */
+  --color-border:         hsl(240, 5.9%, 90%);        /* #e4e4e7  — all dashed lines   */
+  --color-ring:           hsl(240, 5.9%, 10%);        /* #18181b  — focus ring         */
+  --color-input:          hsl(240, 5.9%, 90%);        /* #e4e4e7  — input border       */
+  --color-destructive:    hsl(0, 84.2%, 60.2%);       /* #ef4444  — errors             */
+  --color-destructive-fg: hsl(0, 0%, 98%);            /* #fafafa  — on-destructive     */
+}
+
+.dark {
+  /* ---------- Dark Mode ---------- */
+
+  --hsl-background: 0 0% 3%;
+  --hsl-foreground: 0 0% 98%;
+  --hsl-primary: 0 0% 98%;
+  --hsl-primary-fg: 240 5.9% 10%;
+  --hsl-secondary: 240 3.7% 15.9%;
+  --hsl-muted: 240 3.7% 15.9%;
+  --hsl-muted-fg: 240 5% 64.9%;
+  --hsl-border: 240 3.7% 19%;
+  --hsl-ring: 240 4.9% 83.9%;
+  --hsl-destructive: 0 62.8% 30.6%;
+
+  --color-bg:             hsl(0, 0%, 3%);             /* #080808  — deep black         */
+  --color-fg:             hsl(0, 0%, 98%);            /* #fafafa  — near-white text    */
+  --color-card:           hsl(240, 10%, 3.9%);        /* #09090b  — card surface       */
+  --color-card-fg:        hsl(0, 0%, 98%);            /* #fafafa                       */
+  --color-primary:        hsl(0, 0%, 98%);            /* #fafafa  — buttons            */
+  --color-primary-fg:     hsl(240, 5.9%, 10%);        /* #18181b  — on-primary         */
+  --color-secondary:      hsl(240, 3.7%, 15.9%);      /* #27272a  — subtle fill        */
+  --color-secondary-fg:   hsl(0, 0%, 98%);            /* #fafafa                       */
+  --color-muted:          hsl(240, 3.7%, 15.9%);      /* #27272a                       */
+  --color-muted-fg:       hsl(240, 5%, 64.9%);        /* #a1a1aa  — subdued labels     */
+  --color-accent:         hsl(240, 3.7%, 15.9%);      /* #27272a                       */
+  --color-accent-fg:      hsl(0, 0%, 98%);            /* #fafafa                       */
+  --color-border:         hsl(240, 3.7%, 19%);        /* #323236  — dashed lines       */
+  --color-ring:           hsl(240, 4.9%, 83.9%);      /* #d4d4d8  — focus ring         */
+  --color-input:          hsl(240, 3.7%, 15.9%);      /* #27272a                       */
+  --color-destructive:    hsl(0, 62.8%, 30.6%);       /* dark red                      */
+  --color-destructive-fg: hsl(0, 0%, 98%);
+}
