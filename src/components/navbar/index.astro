@@ -1,43 +1,34 @@
 ---
 import ModeToggle from "@/components/mode-toggle.astro";
 import { PROFILE_INFO } from "@/lib/constants/profile";
-import LogoIcon from "../../assets/logo-icon.svg";
-
-interface Props {
-  className?: string;
-}
-
-const { className } = Astro.props;
+import GithubIcon from "@/components/ui/icons/github.astro";
+import LinkedinIcon from "@/components/ui/icons/linkedin.astro";
 ---
 
-<nav
-  class:list={[
-    "screen-line-after sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
-    className,
-  ]}
->
-  <div
-    class="mx-auto flex max-w-3xl items-center justify-between px-4 py-1 md:border-x"
-  >
-    <a href="/resume" class="flex items-center gap-2">
-      <span class="inline-flex items-center">
-        <LogoIcon
-          class="relative top-[1px] h-8 w-8 text-lime-700 dark:text-cyan-100"
-        />
-      </span>
+<nav class="screen-line-after sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="mx-auto flex max-w-[720px] items-center justify-between px-6 h-[60px] md:border-x">
+    <span class="font-heading font-bold text-[1.125rem] tracking-[-0.01em] select-none text-foreground">
+      {PROFILE_INFO.logo}
+    </span>
 
-      <h1 class="text-xl leading-none font-black font-bold">
-        {PROFILE_INFO.logo}
-      </h1>
-    </a>
-
-    <div class="flex items-center justify-center gap-4">
+    <div class="flex items-center gap-2">
       <a
-        href="resume/cv.pdf"
-        download="Lukasz-Rej-CV.pdf"
-        class="ml-auto rounded bg-cyan-900 px-4 py-2 text-cyan-100 transition-colors hover:bg-cyan-800"
+        href="https://github.com/lukaszrej"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="GitHub profile"
+        class="inline-flex items-center justify-center w-9 h-9 border rounded-lg text-foreground hover:bg-secondary transition-colors"
       >
-        Download PDF
+        <GithubIcon class="size-5" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/lukasz-rej/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="LinkedIn profile"
+        class="inline-flex items-center justify-center w-9 h-9 border rounded-lg text-foreground hover:bg-secondary transition-colors"
+      >
+        <LinkedinIcon class="size-5" />
       </a>
       <ModeToggle />
     </div>

@@ -1,86 +1,66 @@
 ---
 import Avatar from "@/components/ui/avatar.astro";
-// import Box from "@/components/box/index.astro";
-import StyledBox from "@/components/box/styled-box.astro";
-import BoxContent from "@/components/box/content.astro";
-
+import DashedLine from "@/components/ui/dashed-line.astro";
+import MarkdownRenderer from "@/components/ui/markdown-renderer.astro";
 import { PROFILE_INFO } from "@/lib/constants/profile";
-import { Briefcase } from "lucide-react";
-
-import VerifiedIcon from "@/components/ui/icons/verified.astro";
-import GithubIcon from "@/components/ui/icons/github.astro";
-import LinkedinIcon from "@/components/ui/icons/linkedin.astro";
 ---
 
-<div class="screen-line-after relative flex items-center p-4 md:border-x">
-  <div class="shrink-0">
-    <div
-      class="relative mx-0.5 my-1 rounded-full bg-gradient-to-r from-lime-500 to-yellow-100 p-[2px] dark:from-cyan-100 dark:to-cyan-900"
+<section class="py-8 sm:pt-[52px] sm:pb-[40px]">
+
+  <!-- Mobile layout: avatar + name row, then about -->
+  <div class="sm:hidden">
+    <div class="flex items-center gap-4 mb-5">
+      <div class="flex-shrink-0">
+        <Avatar className="!w-[72px] !h-[72px] rounded-[7px] object-cover block" size={72} priority />
+      </div>
+      <div>
+        <h1 class="font-bold text-[1.875rem] tracking-[-0.03em] leading-none mb-1 m-0 text-foreground">
+          {PROFILE_INFO.displayName}
+        </h1>
+        <p class="text-sm text-muted-foreground m-0">{PROFILE_INFO.role}</p>
+      </div>
+    </div>
+    <DashedLine />
+    <div class="text-sm leading-7 my-5 [&_p]:m-0 [&_strong]:font-medium">
+      <MarkdownRenderer content={PROFILE_INFO.about} />
+    </div>
+    <a
+      href={`mailto:${PROFILE_INFO.email}`}
+      class="inline-flex items-center gap-1.5 font-jet text-xs text-muted-foreground no-underline border-b pb-px"
     >
-      <div class="rounded-full bg-background p-[2px]">
-        <Avatar className="size-20 rounded-full sm:size-28" />
-      </div>
-    </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+      {PROFILE_INFO.email}
+    </a>
   </div>
 
-  <div class="flex flex-1 flex-col">
-    <div class="flex grow items-end pb-1 pl-4">
-      <div class="line-clamp-1 font-mono text-xs text-muted-foreground">
-        {PROFILE_INFO.slogan}
-      </div>
-    </div>
-
-    <div class="">
-      <h1 class="flex items-center gap-x-2 pl-4 text-2xl font-black">
+  <!-- Desktop layout: name/content left, avatar right -->
+  <div class="hidden sm:flex justify-between items-start gap-8">
+    <div class="flex-1 min-w-0">
+      <h1 class="font-bold leading-none mb-2 m-0 text-foreground" style="font-size: clamp(2.75rem, 7vw, 4.25rem); letter-spacing: -0.035em;">
         {PROFILE_INFO.displayName}
-        <VerifiedIcon class="size-4 text-blue-500" />
       </h1>
-
-      <div class="py-1 pl-4">
-        <p class="text-sm !font-normal">
-          {PROFILE_INFO.role}
-        </p>
+      <p class="text-[0.9375rem] text-muted-foreground mb-8 m-0">{PROFILE_INFO.role}</p>
+      <DashedLine />
+      <div class="text-[0.9rem] leading-7 my-6 [&_p]:m-0 [&_strong]:font-medium">
+        <MarkdownRenderer content={PROFILE_INFO.about} />
       </div>
+      <a
+        href={`mailto:${PROFILE_INFO.email}`}
+        class="inline-flex items-center gap-1.5 font-jet text-[0.8125rem] text-muted-foreground no-underline border-b pb-px"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        {PROFILE_INFO.email}
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <Avatar className="!w-[148px] !h-[148px] rounded-[7px] object-cover block" size={148} priority />
     </div>
   </div>
-</div>
 
-<StyledBox>
-  <BoxContent className="space-y-3">
-    <span class="flex items-center justify-start gap-2">
-      <Briefcase className="size-4" />
-      I build software for
-      <a
-        href="https://www.vaillant.de/"
-        target="_blank"
-        class="underline underline-offset-4"
-      >
-        Vaillant
-      </a>
-    </span>
-
-    <span class="flex items-center justify-start gap-2">
-      <LinkedinIcon className="size-4" />
-      Let's connect on
-      <a
-        href="https://www.linkedin.com/in/lukasz-rej/"
-        class="underline underline-offset-4"
-        target="_blank"
-      >
-        LinkedIn
-      </a>
-    </span>
-
-    <span class="flex items-center justify-start gap-2">
-      <GithubIcon className="size-4" />
-      Check out my repos on
-      <a
-        href="https://github.com/lukaszrej"
-        class="underline underline-offset-4"
-        target="_blank"
-      >
-        GitHub
-      </a>
-    </span>
-  </BoxContent>
-</StyledBox>
+</section>

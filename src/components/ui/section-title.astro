@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<div>
+  <div class="screen-line-before relative h-px flex-shrink-0 w-full"></div>
+  <div class="pt-[18px] pb-4">
+    <div class="inline-flex flex-col">
+      <h2 class="!font-bold text-[1.0625rem] tracking-[0.07em] uppercase mb-2 text-foreground m-0">
+        {title}
+      </h2>
+      <div class="grad-accent h-0.5 rounded-[1px] w-[150%]"></div>
+    </div>
+  </div>
+  <div class="screen-line-before relative h-px flex-shrink-0 w-full"></div>
+</div>

@@ -1,22 +1,16 @@
 ---
-import Box from "@/components/box/index.astro";
-import BoxHeader from "@/components/box/header.astro";
-import BoxTitle from "@/components/box/title.astro";
-import BoxContent from "@/components/box/content.astro";
-
+import SectionTitle from "@/components/ui/section-title.astro";
+import DashedLine from "@/components/ui/dashed-line.astro";
 import { EDUCATION } from "@/lib/constants/education";
 import EducationItem from "./education-item.astro";
 ---
 
-<Box>
-  <BoxHeader>
-    <BoxTitle>Education</BoxTitle>
-  </BoxHeader>
-  <BoxContent className="px-0">
-    {
-      EDUCATION.map(education => {
-        return <EducationItem education={education} />;
-      })
-    }
-  </BoxContent>
-</Box>
+<section>
+  <SectionTitle title="Education" />
+  {EDUCATION.map((education, i) => (
+    <EducationItem
+      education={education}
+      isLast={i === EDUCATION.length - 1}
+    />
+  ))}
+</section>

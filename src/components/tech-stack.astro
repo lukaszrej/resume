@@ -1,45 +1,26 @@
 ---
-import Box from "@/components/box/index.astro";
-import BoxHeader from "@/components/box/header.astro";
-import BoxTitle from "@/components/box/title.astro";
-import BoxContent from "@/components/box/content.astro";
+import SectionTitle from "@/components/ui/section-title.astro";
 import { TECH_STACK } from "@/lib/constants/tech-stack";
 ---
 
-<Box>
-  <BoxHeader>
-    <BoxTitle>Tech Stack</BoxTitle>
-  </BoxHeader>
-  <BoxContent>
-    <div
-      class="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-3 pt-1"
-      style="content-visibility: auto; contain-intrinsic-size: auto 48px;"
-    >
-      {
-        TECH_STACK.map(item => (
-          <a
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class:list={[
-              "flex h-10 min-w-[120px] items-center justify-center gap-2 rounded-md border border-solid",
-              "bg-blue-50/10 dark:bg-blue-50/10",
-              "transition-all duration-200",
-              "hover:bg-blue-100/60 dark:hover:bg-blue-50/20",
-              "hover:border-blue-300 dark:hover:border-blue-400/40",
-              "hover:-translate-y-[1px]",
-              "hover:shadow-sm dark:hover:shadow-none",
-            ]}
-          >
-            {item.icon && (
-              <span class="flex size-5 items-center justify-center">
-                <item.icon className="size-5" />
-              </span>
-            )}
-            <span class="truncate text-sm">{item.title}</span>
-          </a>
-        ))
-      }
-    </div>
-  </BoxContent>
-</Box>
+<section>
+  <SectionTitle title="Tech Stack" />
+  <div class="grid grid-cols-[repeat(auto-fill,minmax(84px,1fr))] gap-2 py-6">
+    {TECH_STACK.map(item => (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={item.title}
+        class="flex flex-col items-center gap-2 px-2 pt-3.5 pb-2.5 border rounded-lg hover:bg-secondary transition-colors"
+      >
+        <span class="flex items-center justify-center size-7 flex-shrink-0">
+          {item.icon && <item.icon className="size-7" />}
+        </span>
+        <span class="text-[0.625rem] text-muted-foreground text-center leading-[1.3] w-full overflow-hidden text-ellipsis whitespace-nowrap">
+          {item.title}
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

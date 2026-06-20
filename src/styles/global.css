@@ -172,3 +172,38 @@ pre {
   @apply size-4;
 }
 
+/* ── Gradient system ──────────────────────────────────────── */
+:root {
+  --grad: linear-gradient(to right, #84cc16 0%, #fef9c3 100%);
+}
+.dark {
+  --grad: linear-gradient(to right, #cffafe 0%, #164e63 100%);
+}
+
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-accent {
+  background: var(--grad);
+}
+
+.grad-border-wrap {
+  padding: 2px;
+  background: var(--grad);
+  border-radius: 10px;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+@utility font-jet {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+@utility font-heading {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+

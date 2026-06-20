@@ -1,30 +1,18 @@
 ---
-import { SOCIAL_LINKS } from "@/lib/constants";
+import { PROFILE_INFO } from "@/lib/constants/profile";
 ---
 
-<footer class="w-full border-t border-dashed md:border-b">
-  <div
-    class="mx-auto flex max-w-3xl flex-col-reverse items-center justify-between gap-4 border-dashed px-4 py-3 md:border-x lg:flex-row"
-  >
-    <p class="text-sm text-foreground/70">
-      Built by <a
-        href="https://github.com/lukaszrej"
-        class="font-medium text-primary underline underline-offset-4"
-        >Lukasz Rej</a
-      > • source code available on <a
-        href="https://github.com/lukaszrej/resume"
-        class="font-medium text-primary underline underline-offset-4">Github</a
-      >
-    </p>
-
-    <div class="flex items-center justify-center gap-4">
-      {
-        SOCIAL_LINKS.map(link => (
-          <a href={link.url} aria-label={link.name}>
-            <link.icon className="size-4 duration-150 hover:text-primary" />
-          </a>
-        ))
-      }
-    </div>
+<footer class="pt-8 pb-12">
+  <div class="screen-line-before relative h-px flex-shrink-0 w-full"></div>
+  <div class="flex justify-between items-center pt-5">
+    <span class="font-heading font-bold text-[0.9375rem] tracking-[-0.01em] text-foreground">
+      {PROFILE_INFO.logo}
+    </span>
+    <a
+      href={`mailto:${PROFILE_INFO.email}`}
+      class="font-jet text-xs text-muted-foreground no-underline hover:text-foreground transition-colors"
+    >
+      {PROFILE_INFO.email}
+    </a>
   </div>
 </footer>

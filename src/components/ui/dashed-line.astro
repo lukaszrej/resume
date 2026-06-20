@@ -1,0 +1,7 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+<div class:list={["screen-line-before relative h-px flex-shrink-0 w-full", className]}></div>
