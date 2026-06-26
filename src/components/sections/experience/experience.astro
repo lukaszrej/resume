@@ -11,6 +11,7 @@ import ExperienceItem from "./experience-item.astro";
       <ExperienceItem
         experience={experience}
         isLast={i === EXPERIENCES.length - 1}
+        isEven={i % 2 === 1}
       />
     ))}
   </div>

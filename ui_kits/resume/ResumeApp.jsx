@@ -218,12 +218,6 @@ function Profile({ t }) {
     />
   );
 
-  const metaLine = (
-    <p style={{ fontFamily:'var(--font-mono)', fontSize:'0.6875rem', color:t.dimText, margin:'10px 0 0', letterSpacing:'0.02em' }}>
-      // {PROFILE.location} · open to remote
-    </p>
-  );
-
   return (
     <section style={{ padding: isMobile ? '32px 0 28px' : '48px 0 40px' }}>
       {isMobile ? (
@@ -239,7 +233,6 @@ function Profile({ t }) {
               </p>
             </div>
           </div>
-          {metaLine}
           <div style={{ height:'24px' }} />
           <DashedLine t={t} />
           <p style={{ fontFamily:'var(--font-sans)', fontSize:'0.875rem', lineHeight:1.75, color:t.text, margin:'20px 0' }}>
@@ -258,7 +251,6 @@ function Profile({ t }) {
             <p style={{ fontFamily:'var(--font-mono)', fontSize:'0.875rem', color:t.dimText, margin:0, letterSpacing:'0.02em' }}>
               {PROFILE.role}
             </p>
-            {metaLine}
             <div style={{ height:'32px' }} />
             <DashedLine t={t} />
             <p style={{ fontFamily:'var(--font-sans)', fontSize:'0.9rem', lineHeight:1.8, color:t.text, margin:'24px 0' }}>
@@ -354,7 +346,7 @@ function Footer({ t }) {
       <DashedLine t={t} />
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'20px 0 0' }}>
         <span style={{ fontFamily:'var(--font-mono)', fontSize:'0.75rem', color:t.dimText, letterSpacing:'0.04em' }}>
-          // {new Date().getFullYear()}
+          {new Date().getFullYear()}
         </span>
         <a href={`mailto:${PROFILE.email}`} style={{ fontFamily:'var(--font-mono)', fontSize:'0.75rem', color:t.dimText, textDecoration:'none' }}>
           {PROFILE.email}

@@ -5,13 +5,15 @@ import Badge from "@/components/ui/badge.astro";
 interface Props {
   experience: Experience;
   isLast: boolean;
+  isEven: boolean;
 }
 
-const { experience, isLast } = Astro.props;
+const { experience, isLast, isEven } = Astro.props;
 const pos = experience.positions[0];
 const current = experience.current ?? false;
 ---
 
+<div class:list={[isEven && "bg-gradient-to-r from-transparent to-black/[0.03] dark:to-white/[0.05] -mr-[clamp(16px,4vw,24px)] pr-[clamp(16px,4vw,24px)]"]}>
 <div
   style={`
     padding: clamp(20px, 3vw, 26px) 0 clamp(20px, 3vw, 26px) clamp(14px, 2vw, 18px);
@@ -49,5 +51,6 @@ const current = experience.current ?? false;
   <div class="flex gap-1.5 flex-wrap">
     {pos.skills.map(skill => <Badge>{skill}</Badge>)}
   </div>
+</div>
 </div>
 {!isLast && <div style="height: 2px;"></div>}
