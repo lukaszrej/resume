@@ -5,62 +5,109 @@ import MarkdownRenderer from "@/components/ui/markdown-renderer.astro";
 import { PROFILE_INFO } from "@/lib/constants/profile";
 ---
 
-<section class="py-8 sm:pt-[52px] sm:pb-[40px]">
-
-  <!-- Mobile layout: avatar + name row, then about -->
+<section class="py-8 sm:pt-[48px] sm:pb-[40px]">
+  <!-- Mobile layout -->
   <div class="sm:hidden">
-    <div class="flex items-center gap-4 mb-5">
-      <div class="flex-shrink-0">
-        <Avatar className="!w-[72px] !h-[72px] rounded-[7px] object-cover block" size={72} priority />
-      </div>
+    <div class="mb-6 flex items-center gap-4">
+      <Avatar
+        className="block !h-[72px] !w-[72px] rounded-[8px] border object-cover"
+        size={72}
+        priority
+      />
       <div>
-        <h1 class="font-bold text-[1.875rem] tracking-[-0.03em] leading-none mb-1 m-0 text-foreground">
-          {PROFILE_INFO.displayName}
+        <h1
+          class="m-0 mb-[5px] text-[2rem] leading-none font-bold tracking-[-0.03em] text-foreground"
+        >
+          {PROFILE_INFO.displayName}<span class="cursor-blink">_</span>
         </h1>
-        <p class="text-sm text-muted-foreground m-0">{PROFILE_INFO.role}</p>
+        <p class="m-0 font-jet text-[0.75rem] text-muted-foreground">
+          {PROFILE_INFO.role}
+        </p>
       </div>
     </div>
+    <p
+      class="mt-[10px] mb-0 font-jet text-[0.6875rem] tracking-[0.02em] text-muted-foreground"
+    >
+      // {PROFILE_INFO.location} · open to remote
+    </p>
+    <div class="h-6"></div>
     <DashedLine />
-    <div class="text-sm leading-7 my-5 [&_p]:m-0 [&_strong]:font-medium">
+    <div class="my-5 text-sm leading-7 [&_p]:m-0 [&_strong]:font-medium">
       <MarkdownRenderer content={PROFILE_INFO.about} />
     </div>
     <a
       href={`mailto:${PROFILE_INFO.email}`}
-      class="inline-flex items-center gap-1.5 font-jet text-xs text-muted-foreground no-underline border-b pb-px"
+      class="inline-flex items-center gap-1.5 border-b pb-0.5 font-jet text-xs text-muted-foreground no-underline"
     >
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="2" y="4" width="20" height="16" rx="2"/>
-        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
       </svg>
       {PROFILE_INFO.email}
     </a>
   </div>
 
-  <!-- Desktop layout: name/content left, avatar right -->
-  <div class="hidden sm:flex justify-between items-start gap-8">
-    <div class="flex-1 min-w-0">
-      <h1 class="font-bold leading-none mb-2 m-0 text-foreground" style="font-size: clamp(2.75rem, 7vw, 4.25rem); letter-spacing: -0.035em;">
-        {PROFILE_INFO.displayName}
+  <!-- Desktop layout -->
+  <div class="hidden items-start justify-between gap-8 sm:flex">
+    <div class="min-w-0 flex-1">
+      <h1
+        class="m-0 mb-[10px] leading-[0.95] font-bold text-foreground"
+        style="font-size: clamp(3rem, 8vw, 4.5rem); letter-spacing: -0.04em;"
+      >
+        {PROFILE_INFO.displayName}<span class="cursor-blink">_</span>
       </h1>
-      <p class="text-[0.9375rem] text-muted-foreground mb-8 m-0">{PROFILE_INFO.role}</p>
+      <p
+        class="m-0 font-jet text-[0.875rem] tracking-[0.02em] text-muted-foreground"
+      >
+        {PROFILE_INFO.role}
+      </p>
+      <p
+        class="mt-[10px] mb-0 font-jet text-[0.6875rem] tracking-[0.02em] text-muted-foreground"
+      >
+        // {PROFILE_INFO.location} · open to remote
+      </p>
+      <div class="h-8"></div>
       <DashedLine />
-      <div class="text-[0.9rem] leading-7 my-6 [&_p]:m-0 [&_strong]:font-medium">
+      <div
+        class="my-6 text-[0.9rem] leading-[1.8] [&_p]:m-0 [&_strong]:font-medium"
+      >
         <MarkdownRenderer content={PROFILE_INFO.about} />
       </div>
       <a
         href={`mailto:${PROFILE_INFO.email}`}
-        class="inline-flex items-center gap-1.5 font-jet text-[0.8125rem] text-muted-foreground no-underline border-b pb-px"
+        class="inline-flex items-center gap-1.5 border-b pb-0.5 font-jet text-[0.8125rem] text-muted-foreground no-underline"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="2" y="4" width="20" height="16" rx="2"/>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
         {PROFILE_INFO.email}
       </a>
     </div>
-    <div class="flex-shrink-0">
-      <Avatar className="!w-[148px] !h-[148px] rounded-[7px] object-cover block" size={148} priority />
-    </div>
+    <Avatar
+      className="block !h-[148px] !w-[148px] flex-shrink-0 rounded-[8px] border object-cover"
+      size={148}
+      priority
+    />
   </div>
-
 </section>

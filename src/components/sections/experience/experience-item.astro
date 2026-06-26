@@ -1,31 +1,53 @@
 ---
 import type { Experience } from "@/lib/types";
-import DashedLine from "@/components/ui/dashed-line.astro";
 import Badge from "@/components/ui/badge.astro";
 
 interface Props {
   experience: Experience;
   isLast: boolean;
-  isEven: boolean;
 }
 
-const { experience, isLast, isEven } = Astro.props;
+const { experience, isLast } = Astro.props;
 const pos = experience.positions[0];
+const current = experience.current ?? false;
 ---
 
-<div class:list={["py-7", isEven && "bg-gradient-to-r from-transparent to-black/[0.03] dark:to-white/[0.05] -mr-[clamp(16px,4vw,24px)] pr-[clamp(16px,4vw,24px)]"]}>
+<div
+  style={`
+    padding: clamp(20px, 3vw, 26px) 0 clamp(20px, 3vw, 26px) clamp(14px, 2vw, 18px);
+    border-left: 2px dashed ${current ? 'var(--accent-top)' : 'hsl(var(--border))'};
+    margin-left: 1px;
+    position: relative;
+  `}
+>
+  <!-- Timeline dot -->
+  <div style={`
+    position: absolute;
+    left: -5px;
+    top: clamp(28px, 4vw, 34px);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: ${current ? 'var(--accent-top)' : 'hsl(var(--border))'};
+  `}></div>
+
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5 sm:gap-4 mb-1">
-    <h3 class="font-bold text-[1.0625rem] tracking-[-0.01em] text-foreground m-0">
+    <h3 class="font-bold text-[1.0625rem] tracking-[-0.01em] m-0" style={current ? 'color: hsl(var(--foreground))' : 'color: hsl(var(--foreground))'}>
       {experience.company}
+      {current && (
+        <span class="font-jet" style="font-size: 0.5625rem; font-weight: 600; color: var(--accent-alt); border: 1px solid var(--accent-alt); border-radius: 3px; padding: 1px 5px; margin-left: 10px; letter-spacing: 0.06em; vertical-align: middle;">
+          NOW
+        </span>
+      )}
     </h3>
-    <span class="font-jet text-xs text-muted-foreground whitespace-nowrap flex-shrink-0">
+    <span class="font-jet text-[0.6875rem] whitespace-nowrap flex-shrink-0" style={current ? 'color: var(--accent-alt)' : 'color: hsl(var(--muted-foreground))'}>
       {pos.year}
     </span>
   </div>
   <p class="text-sm font-medium text-foreground mb-2 m-0">{pos.title}</p>
-  <p class="text-sm text-muted-foreground mb-3.5 leading-[1.65] m-0">{pos.description}</p>
+  <p class="text-[0.8125rem] text-muted-foreground mb-3.5 leading-[1.65] m-0">{pos.description}</p>
   <div class="flex gap-1.5 flex-wrap">
     {pos.skills.map(skill => <Badge>{skill}</Badge>)}
   </div>
 </div>
-{!isLast && <DashedLine />}
+{!isLast && <div style="height: 2px;"></div>}

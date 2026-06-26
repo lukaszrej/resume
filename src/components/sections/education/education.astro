@@ -1,16 +1,17 @@
 ---
 import SectionTitle from "@/components/ui/section-title.astro";
-import DashedLine from "@/components/ui/dashed-line.astro";
 import { EDUCATION } from "@/lib/constants/education";
 import EducationItem from "./education-item.astro";
 ---
 
 <section>
-  <SectionTitle title="Education" />
-  {EDUCATION.map((education, i) => (
-    <EducationItem
-      education={education}
-      isLast={i === EDUCATION.length - 1}
-    />
-  ))}
+  <SectionTitle title="Education" n={3} />
+  <div style="padding-top: 4px;">
+    {EDUCATION.map((education, i) => (
+      <EducationItem
+        education={education}
+        isLast={i === EDUCATION.length - 1}
+      />
+    ))}
+  </div>
 </section>

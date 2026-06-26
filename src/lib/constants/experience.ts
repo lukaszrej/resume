@@ -3,6 +3,7 @@ import type { Experience } from "../types";
 export const EXPERIENCES: Experience[] = [
   {
     company: "Vaillant Group",
+    current: true,
     positions: [
       {
         title: "Frontend React.js Developer",

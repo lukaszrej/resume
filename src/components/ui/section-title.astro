@@ -1,18 +1,19 @@
 ---
 interface Props {
   title: string;
+  n: number;
 }
-const { title } = Astro.props;
+const { title, n } = Astro.props;
+const num = String(n).padStart(2, '0');
 ---
-<div>
-  <div class="screen-line-before relative h-px flex-shrink-0 w-full"></div>
-  <div class="pt-[18px] pb-4">
-    <div class="inline-flex flex-col">
-      <h2 class="!font-bold text-[1.0625rem] tracking-[0.07em] uppercase mb-2 text-foreground m-0">
-        {title}
-      </h2>
-      <div class="grad-accent h-0.5 rounded-[1px] w-[150%]"></div>
-    </div>
+<div style="padding: 28px 0 0;">
+  <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px;">
+    <span class="font-jet" style="font-size: 0.6875rem; font-weight: 600; color: var(--accent-alt); letter-spacing: 0.05em; flex-shrink: 0;">
+      {num} /
+    </span>
+    <h2 class="font-heading" style="font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: hsl(var(--muted-foreground)); margin: 0;">
+      {title}
+    </h2>
   </div>
   <div class="screen-line-before relative h-px flex-shrink-0 w-full"></div>
 </div>

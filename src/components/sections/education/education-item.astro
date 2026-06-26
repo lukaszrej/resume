@@ -17,18 +17,18 @@ const description = pos.description
   .replace(/^- /, "");
 ---
 
-<div class="py-7">
+<div class="py-[26px]">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5 sm:gap-4 mb-1">
     <h3 class="font-bold text-[1.0625rem] tracking-[-0.01em] text-foreground m-0">
       {education.institution}
     </h3>
-    <span class="font-jet text-xs text-muted-foreground whitespace-nowrap flex-shrink-0">
+    <span class="font-jet text-[0.6875rem] text-muted-foreground whitespace-nowrap flex-shrink-0">
       {pos.year}
     </span>
   </div>
   <p class="text-sm font-medium text-foreground mb-2 m-0">{pos.title}</p>
   {description && (
-    <p class="text-sm text-muted-foreground mb-3 leading-[1.6] m-0">{description}</p>
+    <p class="text-[0.8125rem] text-muted-foreground mb-3 leading-[1.65] m-0">{description}</p>
   )}
   <div class="flex gap-1.5 flex-wrap">
     {pos.skills.map(skill => <Badge>{skill}</Badge>)}

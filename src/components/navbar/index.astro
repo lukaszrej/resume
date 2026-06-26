@@ -5,30 +5,31 @@ import GithubIcon from "@/components/ui/icons/github.astro";
 import LinkedinIcon from "@/components/ui/icons/linkedin.astro";
 ---
 
-<nav class="screen-line-after sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-  <div class="mx-auto flex max-w-[720px] items-center justify-between px-6 h-[60px] md:border-x">
-    <span class="font-heading font-bold text-[1.125rem] tracking-[-0.01em] select-none text-foreground">
+<div class="accent-top-bar"></div>
+<nav class="screen-line-after sticky top-[2px] z-50 w-full bg-background">
+  <div class="mx-auto flex max-w-[720px] items-center justify-between px-[clamp(16px,4vw,24px)] h-[56px] md:border-x">
+    <span class="font-jet font-semibold text-[0.875rem] tracking-[-0.01em] select-none text-foreground">
       {PROFILE_INFO.logo}
     </span>
 
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-1.5">
       <a
         href="https://github.com/lukaszrej"
         target="_blank"
         rel="noopener noreferrer"
         title="GitHub profile"
-        class="inline-flex items-center justify-center w-9 h-9 border rounded-lg text-foreground hover:bg-secondary transition-colors"
+        class="icon-btn-accent inline-flex items-center justify-center w-[34px] h-[34px] border rounded-[6px] text-muted-foreground transition-colors"
       >
-        <GithubIcon class="size-5" />
+        <GithubIcon class="size-[18px]" />
       </a>
       <a
         href="https://www.linkedin.com/in/lukasz-rej/"
         target="_blank"
         rel="noopener noreferrer"
         title="LinkedIn profile"
-        class="inline-flex items-center justify-center w-9 h-9 border rounded-lg text-foreground hover:bg-secondary transition-colors"
+        class="icon-btn-accent inline-flex items-center justify-center w-[34px] h-[34px] border rounded-[6px] text-muted-foreground transition-colors"
       >
-        <LinkedinIcon class="size-5" />
+        <LinkedinIcon class="size-[18px]" />
       </a>
       <ModeToggle />
     </div>

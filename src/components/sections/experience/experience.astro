@@ -1,17 +1,17 @@
 ---
 import SectionTitle from "@/components/ui/section-title.astro";
-import DashedLine from "@/components/ui/dashed-line.astro";
 import { EXPERIENCES } from "@/lib/constants/experience";
 import ExperienceItem from "./experience-item.astro";
 ---
 
 <section>
-  <SectionTitle title="Experience" />
-  {EXPERIENCES.map((experience, i) => (
-    <ExperienceItem
-      experience={experience}
-      isLast={i === EXPERIENCES.length - 1}
-      isEven={i % 2 === 1}
-    />
-  ))}
+  <SectionTitle title="Experience" n={1} />
+  <div style="padding-top: 8px;">
+    {EXPERIENCES.map((experience, i) => (
+      <ExperienceItem
+        experience={experience}
+        isLast={i === EXPERIENCES.length - 1}
+      />
+    ))}
+  </div>
 </section>

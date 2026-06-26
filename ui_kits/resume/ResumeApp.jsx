@@ -48,7 +48,7 @@ const PROFILE = {
   name:     'Łukasz Rej',
   role:     'Frontend Developer',
   wordmark: 'lukasz.rej',
-  location: 'Warsaw, Poland',
+  location: 'Poland',
   email:    'rejlukasz@gmail.com',
   github:   'https://github.com/lukaszrej',
   linkedin: 'https://www.linkedin.com/in/lukasz-rej/',

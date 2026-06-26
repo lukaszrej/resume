@@ -1,16 +1,17 @@
 ---
 import { PROFILE_INFO } from "@/lib/constants/profile";
+const year = new Date().getFullYear();
 ---
 
 <footer class="pt-8 pb-12">
   <div class="screen-line-before relative h-px flex-shrink-0 w-full"></div>
   <div class="flex justify-between items-center pt-5">
-    <span class="font-heading font-bold text-[0.9375rem] tracking-[-0.01em] text-foreground">
-      {PROFILE_INFO.logo}
+    <span class="font-jet text-xs text-muted-foreground tracking-[0.04em]">
+      // {year}
     </span>
     <a
       href={`mailto:${PROFILE_INFO.email}`}
-      class="font-jet text-xs text-muted-foreground no-underline hover:text-foreground transition-colors"
+      class="font-jet text-xs text-muted-foreground no-underline"
     >
       {PROFILE_INFO.email}
     </a>

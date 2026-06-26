@@ -7,6 +7,7 @@ export type Position = {
 
 export type Experience = {
   company: string;
+  current?: boolean;
   positions: Position[];
 };
 
